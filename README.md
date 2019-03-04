@@ -4,4 +4,6 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runniing the app: https://tirq.github.io/react-tic-tac-toe/
+Running the app: https://tirq.github.io/react-tic-tac-toe/
+
+Step explained ([docs/index.md](docs/index.md))
