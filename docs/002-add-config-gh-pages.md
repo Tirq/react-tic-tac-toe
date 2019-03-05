@@ -1,4 +1,7 @@
-# 001-add-config-gh-pages
+# 002-add-config-gh-pages
+
+[index](index.md)
+
 
 Follow the steps explained [here](https://facebook.github.io/create-react-app/docs/deployment#github-pages-https-pagesgithubcom)
 
