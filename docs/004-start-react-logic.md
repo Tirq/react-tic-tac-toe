@@ -25,7 +25,3 @@ renderSquare(value){
 </button>
 ```
 </details>
-
-
-
-Change Square’s render method to show that value by replacing {/* TODO */} with {this.props.value}

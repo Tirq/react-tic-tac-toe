@@ -12,10 +12,7 @@ cd src/
 rm -f *
 cd ..
 ```
-
 </details>
-
-
 
 <details>
 <summary>
@@ -150,6 +147,3 @@ ReactDOM.render(
 
 ```
 </details>
-
-
-

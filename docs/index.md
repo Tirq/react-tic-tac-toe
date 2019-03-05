@@ -8,3 +8,5 @@
 
 [004-start-react-logic](004-start-react-logic.md)
 
+[005-split-files](005-split-files.md)
+
