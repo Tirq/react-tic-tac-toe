@@ -2,23 +2,48 @@
 
 Follow the steps explained [here](https://facebook.github.io/create-react-app/docs/deployment#github-pages-https-pagesgithubcom)
 
-Changed package.json to specify the homepage:
+<details>
+<summary>
+<i>Changed package.json to specify the homepage:</i>
+</summary>
+
 ```
   "homepage": "https://tirq.github.io/react-tic-tac-toe/",
 ```
+</details>
 
-Run command to install dependencies related with gh-pages:
+
+
+<details>
+<summary>
+<i>Run command to install dependencies related with gh-pages:</i>
+</summary>
+
 ```
   npm install --save gh-pages
 ```
+</details>
 
-Add predeploy/deply commands on script section:
+
+<details>
+<summary>
+<i>Add predeploy/deply commands on script section:</i>
+</summary>
+
 ```
    "predeploy": "npm run build",
    "deploy": "gh-pages -d build",
 ```
+</details>
 
-Finally, execute command to deploy app on gh-pages:
+<details>
+<summary>
+<i>Finally, execute command to deploy app on gh-pages:</i>
+</summary>
+
 ```
 npm run deploy
 ```
+</details>
+
+
