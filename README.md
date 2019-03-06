@@ -6,4 +6,4 @@ In the project directory, you can run:
 
 Running the app: https://tirq.github.io/react-tic-tac-toe/
 
-Step explained ([docs/index.md](docs/index.md))
+Steps by step - docs ([docs/index.md](docs/index.md))

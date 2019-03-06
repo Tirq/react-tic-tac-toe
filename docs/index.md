@@ -10,3 +10,7 @@
 
 [005-split-files](005-split-files.md)
 
+[006-filled-with-x](006-filled-with-x.md)
+
+[007-cross-and-circle](007-cross-and-circle.md)
+

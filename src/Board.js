@@ -3,13 +3,33 @@ import Square from './Square';
 import './index.css';
 
 class Board extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      squares: Array(9).fill(null),
+      xIsNext: true,
+    };
+  }
 
-  renderSquare(value) {
-    return <Square value={value}/>;
+  handleClick(index){
+    const squares = this.state.squares.slice();
+    squares[index] = this.state.xIsNext ? 'X' : 'O';
+    this.setState({
+      squares,
+      xIsNext: !this.state.xIsNext,  
+    });
+  }
+
+  renderSquare(index) {
+    return (
+      <Square value={this.state.squares[index]}
+              onClick={() => this.handleClick(index)}  
+      />
+    );
   }
 
   render() {
-    const status = 'Next player: X';
+    const status = 'Next player: '+ ( this.state.xIsNext ? 'X' : 'O');
 
     return (
       <div>
