@@ -1,6 +1,6 @@
 import React from 'react';
 import Square from './Square';
-import './index.css';
+import {calculateWinner} from './Helper';
 
 class Board extends React.Component {
   constructor(props){
@@ -8,29 +8,38 @@ class Board extends React.Component {
     this.state = {
       squares: Array(9).fill(null),
       xIsNext: true,
+      winner: null,
     };
   }
 
   handleClick(index){
     const squares = this.state.squares.slice();
     squares[index] = this.state.xIsNext ? 'X' : 'O';
+    const winner = calculateWinner(squares);
     this.setState({
       squares,
       xIsNext: !this.state.xIsNext,  
+      winner: winner,
     });
   }
 
   renderSquare(index) {
     return (
       <Square value={this.state.squares[index]}
-              onClick={() => this.handleClick(index)}  
+              onClick={() => this.handleClick(index)}
+              disabled={this.state.squares[index] || this.state.winner}  
       />
     );
   }
 
   render() {
-    const status = 'Next player: '+ ( this.state.xIsNext ? 'X' : 'O');
-
+    let status;
+    if(this.state.winner != null){
+      status = 'Winner: '+ this.state.winner;
+    }else{
+      status = 'Next player: '+ ( this.state.xIsNext ? 'X' : 'O');
+    }
+    
     return (
       <div>
         <div className="status">{status}</div>

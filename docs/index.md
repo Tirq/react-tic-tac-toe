@@ -15,3 +15,5 @@
 [007-cross-and-circle](007-cross-and-circle.md)
 
 [008-function-component](008-function-component.md)
+
+[009-determine-winner](009-determine-winner.md)
