@@ -5,8 +5,8 @@ function Square(props){
     <button className="square" 
             onClick={props.onClick} 
             disabled={props.disabled}>
-        {props.value}
-      </button>
+      {props.value}
+    </button>
   );
 }
 

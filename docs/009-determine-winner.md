@@ -1,4 +1,4 @@
-# 0009-determine-winner
+# 009-determine-winner
 
 [index](index.md)
 
