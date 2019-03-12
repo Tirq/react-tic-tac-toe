@@ -19,3 +19,5 @@
 [009-determine-winner](009-determine-winner.md)
 
 [010-add-time-travel](010-add-time-travel.md)
+
+[011-bold-current-move](011-bold-current-move.md)
