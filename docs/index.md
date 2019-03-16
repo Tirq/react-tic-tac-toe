@@ -21,3 +21,5 @@
 [010-add-time-travel](010-add-time-travel.md)
 
 [011-bold-current-move](011-bold-current-move.md)
+
+[012-show-coordinates](012-show-coordinates.md)

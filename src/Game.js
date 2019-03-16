@@ -11,6 +11,7 @@ class Game extends React.Component {
         squares: Array(9).fill(null),
         xIsNext: true,
         winner: null,
+        played: null,
       }],
       stepNumber:0,
     };
@@ -28,6 +29,7 @@ class Game extends React.Component {
         squares: squares,
         xIsNext: !current.xIsNext,  
         winner: winner,
+        played: index,
       }]),
       stepNumber: history.length,  
     });
@@ -47,11 +49,18 @@ class Game extends React.Component {
     }
   }
 
+  buildLabelHistory(move, played){
+    if(!move) return 'Go to game start';
+    let row = Math.floor(played / 3)+1;
+    let col = (played % 3)+1;
+    return `Go to move # ${move} row: ${row} col: ${col}`;
+  }
+
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const moves = history.map((step,move) => {
-      const desc = move ? 'Go to move #'+ move : 'Go to game start';
+      let desc = this.buildLabelHistory(move, step.played);
       return (
         <li key={move}>
           <button 
