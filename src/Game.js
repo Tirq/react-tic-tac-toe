@@ -41,12 +41,10 @@ class Game extends React.Component {
     });
   }
 
-  getGameState(current){
-    if(current.winner){
-      return 'Winner: '+ current.winner;
-    }else{
-      return 'Next player: '+ ( current.xIsNext ? 'X' : 'O');
-    }
+  getGameState(current,stepNumber){
+    if(current.winner) return 'Winner: '+ current.winner;
+    if(stepNumber === 9) return 'Draw!';
+    return 'Next player: '+ ( current.xIsNext ? 'X' : 'O');
   }
 
   buildLabelHistory(move, played){
@@ -58,7 +56,8 @@ class Game extends React.Component {
 
   render() {
     const history = this.state.history;
-    const current = history[this.state.stepNumber];
+    const stepNumber = this.state.stepNumber;
+    const current = history[stepNumber];
     const moves = history.map((step,move) => {
       let desc = this.buildLabelHistory(move, step.played);
       return (
@@ -69,8 +68,7 @@ class Game extends React.Component {
         </li>
       );
     });
-    
-    let status = this.getGameState(current);
+    let status = this.getGameState(current,stepNumber);
 
     return (
       <div className="game">

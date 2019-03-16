@@ -25,3 +25,5 @@
 [012-show-coordinates](012-show-coordinates.md)
 
 [013-dynamic-board](013-dynamic-board.md)
+
+[014-determine-draw](014-determine-draw.md)
