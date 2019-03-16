@@ -23,3 +23,5 @@
 [011-bold-current-move](011-bold-current-move.md)
 
 [012-show-coordinates](012-show-coordinates.md)
+
+[013-dynamic-board](013-dynamic-board.md)
