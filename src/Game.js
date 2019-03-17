@@ -42,7 +42,7 @@ class Game extends React.Component {
   }
 
   getGameState(current,stepNumber){
-    if(current.winner) return 'Winner: '+ current.winner;
+    if(current.winnerInfo) return 'Winner: '+ current.winnerInfo.winner;
     if(stepNumber === 9) return 'Draw!';
     return 'Next player: '+ ( current.xIsNext ? 'X' : 'O');
   }
