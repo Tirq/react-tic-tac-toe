@@ -16,12 +16,17 @@ class Board extends React.Component {
   }
 
   renderSquare(index) {
+    const value = this.props.squares[index];
+    const winner = this.props.winnerInfo;
+    let className = 'square' + (!value ? '' : value === 'X' ? ' red' : ' blue');
+    if(winner && this.props.winnerInfo.indexes.includes(index)) className+= ' winner';
     return (
       <span key={index}>
         <Square
-          value={this.props.squares[index]}
+          className={className}
+          value={value}
           onClick={() => this.props.onClick(index)}
-          disabled={this.props.squares[index] || this.props.winner}  
+          disabled={this.props.squares[index] || winner}  
         />
       </span>
     );

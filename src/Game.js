@@ -10,7 +10,7 @@ class Game extends React.Component {
       history: [{
         squares: Array(9).fill(null),
         xIsNext: true,
-        winner: null,
+        winnerInfo: null,
         played: null,
       }],
       stepNumber:0,
@@ -23,12 +23,12 @@ class Game extends React.Component {
     const current = history[lastIndex];
     const squares = current.squares.slice();
     squares[index] = current.xIsNext ? 'X' : 'O';
-    const winner = calculateWinner(squares);
+    const winnerInfo = calculateWinner(squares);
     this.setState({
       history: history.concat([{
         squares: squares,
         xIsNext: !current.xIsNext,  
-        winner: winner,
+        winnerInfo: winnerInfo,
         played: index,
       }]),
       stepNumber: history.length,  
@@ -75,7 +75,7 @@ class Game extends React.Component {
         <div className="game-board">
           <Board 
             squares={current.squares}
-            winner={current.winner}
+            winnerInfo={current.winnerInfo}
             onClick={(i) => this.handleClick(i)}
           />
         </div>

@@ -27,3 +27,5 @@
 [013-dynamic-board](013-dynamic-board.md)
 
 [014-determine-draw](014-determine-draw.md)
+
+[015-colors](015-colors.md)

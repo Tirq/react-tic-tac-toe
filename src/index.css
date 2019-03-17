@@ -32,6 +32,18 @@ ol, ul {
   width: 34px;
 }
 
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.winner {
+  text-decoration: underline;
+}
+
 .square:focus {
   outline: none;
 }
